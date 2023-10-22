@@ -2,7 +2,7 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import "./style/landSec.scss";
 import "./style/cart.scss";
-import { RemoveFromCart, decreaseQuantity, increaseQuantity } from '../rtk/slices/CartSlice';
+import { ClearCart, RemoveFromCart, decreaseQuantity, increaseQuantity } from '../rtk/slices/CartSlice';
 import Swal from 'sweetalert2';
 
 
@@ -19,6 +19,7 @@ function Cart() {
             if (result.isConfirmed) {
                 Swal.fire('Payment Done', '', 'success')
             }
+            dispatch(ClearCart());
         })
     }
 

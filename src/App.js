@@ -29,8 +29,8 @@ function App() {
       {renderHeader()}
       <Routes>
         <Route path='/' element={<><Outlet /></>}>
-          <Route path="" element={<Home />} />
-          <Route path="cart" element={<Cart />} />
+          <Route path="/ecommerce-website" element={<Home />} />
+          <Route path="/cart" element={<Cart />} />
         </Route>
         <Route path='about' element={<About />} />
         <Route path='contact' element={<Contact />} />

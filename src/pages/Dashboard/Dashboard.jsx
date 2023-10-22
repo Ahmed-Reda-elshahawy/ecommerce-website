@@ -43,7 +43,7 @@ const Dashboard = () => {
                         <h6 className='text-black mt-2 fw-bold'>{Admin.fName}</h6>
                     </div>
                     <ul className='side-links mt-5 ps-0'>
-                        <Link to="/" className='d-block mb-5 text-center text-lg-start'>
+                        <Link to="/ecommerce-website" className='d-block mb-5 text-center text-lg-start'>
                             <i className="fa-solid fa-house fa-xl"></i>
                             <span className='ps-2 d-none d-lg-inline'>Home</span>
                         </Link>

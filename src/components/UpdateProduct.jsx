@@ -29,7 +29,7 @@ const UpdateProduct = () => {
     const handleImageChange = (e) => {
         const file = e.target.files[0];
         console.log(file.name);
-        setImage(`Images/${file.name}`);
+        setImage(`${process.env.PUBLIC_URL}/Images/${file.name}`);
     }
 
     // updated product
@@ -92,7 +92,7 @@ const UpdateProduct = () => {
                             {image ? <img src={image} alt='not found' /> :
                                 <>
                                     < p className='upload-p text-black-50 m-0 fs-5 fw-bold'>Upload Image</p>
-                                    <img src="/Images/upload.jpg" alt='' />
+                                    <img src={process.env.PUBLIC_URL + "/Images/upload.jpg"} alt='' />
                                 </>
                             }
                             <input type="file" ref={inputRef} onChange={handleImageChange} className='d-none' />

@@ -11,7 +11,7 @@ const About = () => {
     return (
         <main className='container about mt-5 pt-5 d-md-flex gap-md-5 align-items-center'>
             <section className='img-sec w-md-50' data-aos="flip-right" >
-                <img className='w-100 rounded-5 border border-3 border-white p-2' src="/Images/about.jpg" alt="about-img" />
+                <img src={process.env.PUBLIC_URL + "/Images/about.jpg"} className='w-100 rounded-5 border border-3 border-white p-2' alt="about-img" />
             </section>
             <section className='text-sec w-md-50 mt-4 mt-md-0' data-aos="flip-right">
                 <p data-aos="fade-down" data-aos-easing="linear" >
