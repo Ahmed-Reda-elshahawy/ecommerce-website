@@ -82,7 +82,7 @@ function Header() {
         <Navbar fixed='top' expand="lg" className="bg-body-tertiary nav">
             <Container>
                 <Navbar.Brand>
-                    <Link to="/ecommerce-website" className='text-secondary fw-bold'>Shopping<span className='sec-color'>Hub</span></Link>
+                    <Link to="/" className='text-secondary fw-bold'>Shopping<span className='sec-color'>Hub</span></Link>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
