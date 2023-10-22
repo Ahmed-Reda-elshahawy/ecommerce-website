@@ -1,0 +1,88 @@
+$main-color: rgb(218 120 116);
+
+.dashboard {
+    i {
+        color: $main-color;
+    }
+
+    span {
+        color: black;
+    }
+}
+
+.dashboard {
+    min-height: 100vh;
+
+    .sideBar {
+        background-color: rgb(108 108 108);
+
+        .dash-title {
+            margin-top: 10px;
+        }
+
+        .avatar {
+            .icon {
+                width: fit-content;
+                background-color: rgb(227, 227, 227);
+                color: $main-color;
+                padding: 20px;
+                border-radius: 50%;
+                margin: 0 auto;
+
+                @media screen and (max-width: 576px) {
+                    & {
+                        background-color: transparent;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .content {
+        background-color: rgb(218, 215, 217) !important; //#546e7a
+
+        .product {
+            .product-img {
+                width: 100px;
+                height: 110px;
+                object-fit: contain;
+            }
+
+            .title {
+                width: 250px;
+            }
+
+            .description {
+                max-width: 250px;
+            }
+
+            .price {
+                width: 100px;
+            }
+
+            .ellipsis {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            .ellipsis-dots {
+                cursor: pointer;
+            }
+
+            .ellipsis-dots:hover {
+                color: blue;
+            }
+
+            @media only screen and (max-width:991px) {
+                flex-direction: column;
+
+                .actions {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,81 @@
+$secondColor : rgb(218 120 116);
+
+.sec-color {
+    color: $secondColor;
+}
+
+.sec-bgColor {
+    background-color: $secondColor;
+}
+
+
+.cat-list {
+    .cat {
+        padding: 5px;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid #f1f1f7;
+        }
+
+        .link {
+            transition: all 0.2s;
+        }
+
+        .link:hover {
+            font-weight: bold;
+        }
+    }
+}
+
+.landing {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(218, 215, 217);
+    padding: 2rem;
+    height: 100vh;
+    box-sizing: border-box;
+
+    .info {
+        h1 {
+            margin-bottom: 1.5rem;
+
+            span {
+                color: rgb(218 120 116);
+            }
+        }
+
+        p {
+            width: 500px;
+        }
+
+        button {
+            margin-top: 1rem;
+        }
+    }
+
+    .land-img {
+        img {
+            width: 500px;
+        }
+    }
+}
+
+@media (max-width:1200px) {
+    .landing {
+        text-align: center;
+        gap: 0;
+
+        .info {
+            p {
+                width: 100%;
+            }
+        }
+
+        .land-img {
+            img {
+                display: none;
+            }
+        }
+    }
+}

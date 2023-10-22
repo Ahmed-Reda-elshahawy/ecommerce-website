@@ -1,0 +1,35 @@
+.added-product {
+    padding: 2rem;
+    background-color: white;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    position: relative;
+
+    .disc {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-grow: 1;
+
+        @media (max-width:768px) {
+            justify-content: flex-end;
+            flex-direction: column;
+        }
+    }
+
+    img {
+        width: 160px;
+        height: 160px;
+        object-fit: contain;
+    }
+
+    .btn-delete {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+}

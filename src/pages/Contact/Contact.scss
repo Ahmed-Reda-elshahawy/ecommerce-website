@@ -1,0 +1,41 @@
+.contact {
+    min-height: 100vh;
+    background-image: url("../../assets/images/contact.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .contact-content {
+        width: 400px;
+        // position: relative;
+
+        input,
+        textarea {
+            outline: none;
+            border: none;
+        }
+
+        textarea {
+            min-height: 150px;
+            resize: none;
+        }
+
+        .main-bg {
+            background-color: rgb(218, 120, 116);
+        }
+
+        .main-color {
+            color: rgb(218, 120, 116);
+        }
+    }
+}

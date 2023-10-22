@@ -1,0 +1,24 @@
+.footer {
+    .contact-links {
+        .face {
+            i:hover {
+                color: #1877f2;
+                transition: all 0.5s;
+            }
+        }
+
+        .linkedin {
+            i:hover {
+                color: #0a66c2;
+                transition: all 0.5s;
+            }
+        }
+
+        .twitter {
+            i:hover {
+                color: #1da1f2;
+                transition: all 0.5s;
+            }
+        }
+    }
+}

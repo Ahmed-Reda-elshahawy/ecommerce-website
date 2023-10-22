@@ -1,0 +1,13 @@
+.product-details {
+    .img-div {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+
+        img {
+            height: 200px;
+            padding: 1rem;
+            object-fit: contain;
+        }
+    }
+}
