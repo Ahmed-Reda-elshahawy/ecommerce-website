@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Container, Form, Nav, NavDropdown, Navbar } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
@@ -17,6 +17,7 @@ function Header() {
     let Categories = useSelector(state => state.categoryList);
     let Products = useSelector(state => state.products);
     let User = useSelector(state => state.logInOut);
+    const searchText = useRef();
     let dispatsh = useDispatch();
 
     useEffect(() => {
@@ -31,7 +32,6 @@ function Header() {
             )
         });
         setSearchProducts(searchProducts);
-        console.log(searchProducts);
     }
 
 
@@ -78,6 +78,12 @@ function Header() {
     }
 
 
+    const searchHandle = (SearchProducts) => {
+        dispatsh(SearchedProducts(SearchProducts));
+        searchText.current.value = "";
+    }
+
+
     return (
         <Navbar fixed='top' expand="lg" className="bg-body-tertiary nav">
             <Container>
@@ -93,8 +99,9 @@ function Header() {
                             className=" mr-sm-2 w-50"
                             value={Products.title}
                             onChange={(e) => handleChange(e.target.value)}
+                            ref={searchText}
                         />
-                        <button className='sec-bgColor py-1 px-2 rounded-2 text-light border-0' onClick={() => dispatsh(SearchedProducts(searchProducts))}><i className="fa-solid fa-magnifying-glass "></i></button>
+                        <button className='sec-bgColor py-1 px-2 rounded-2 text-light border-0' onClick={() => searchHandle(searchProducts)}><i className="fa-solid fa-magnifying-glass "></i></button>
                     </div>
                     <Nav className="ms-auto d-flex align-items-center gap-3">
                         <NavDropdown title="Category" id="basic-nav-dropdown p-3" className='cat-list'>
